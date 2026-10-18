@@ -384,8 +384,13 @@ Essayer("commande /sdt progression", SlashCmdList.SALLEDUTEMPS, "progression")
 
 -- Personnages : les sessions du prêtre sont à lui ; un voleur ne les voit pas.
 Essayer("sessions par personnage", function()
+    -- Sans sauvegarde (copie publique du dépôt) : une session de prêtre fabriquée.
+    SalleDuTempsDB.sessions = SalleDuTempsDB.sessions or {}
+    if not SalleDuTempsDB.sessions[1] then
+        SalleDuTempsDB.sessions[1] = { uid = "pretre-simulation", classe = "PRIEST", duree = 30, type = "mono",
+                                       date = "2026-10-18 12:00", sorts = {} }
+    end
     local s = SalleDuTempsDB.sessions[1]
-    assert(s, "aucune session")
     -- La sauvegarde réelle est peut-être déjà attribuée (au vrai prêtre) : attribution refaite sur une session
     -- remise sans personnage, de la classe du personnage connecté.
     s.personnage, s.classe = nil, select(2, UnitClass("player"))
