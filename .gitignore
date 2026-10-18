@@ -1,0 +1,5 @@
+# Données de jeu personnelles (sessions réelles exportées par tests/analyser_sauvegarde.lua) : jamais publiées.
+tests/traces/
+# Sauvegardes de l'addon copiées pour les tests.
+*SalleDuTemps.lua.bak
+sauvegarde_copie.lua

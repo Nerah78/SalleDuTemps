@@ -1,0 +1,21 @@
+## Interface: 16001
+## Title: La Salle du Temps
+## Notes: Trouver la meilleure rotation DPS sur mannequin, puis la jouer en rythme.
+## Author: Sébastien
+## Version: 0.14.0
+## SavedVariables: SalleDuTempsDB
+
+modules\Core.lua
+modules\Data.lua
+modules\Cycle.lua
+modules\Partition.lua
+modules\Coach.lua
+modules\Capture.lua
+modules\Session.lua
+modules\Guide.lua
+ui\Session.lua
+ui\Cycle.lua
+ui\Journal.lua
+ui\Editeur.lua
+ui\HUD.lua
+ui\Progression.lua
